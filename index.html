@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!--Favicon-->
+<link rel="shortcut icon" href="top_secret.ico">
+
+<title>Cipher text</title>
+</head>
+
+<style type="text/css">
+body{background-color: #e5e5e5;}
+</style>
+
+<body>
+<br><br><br><br><br>
+<div class="container">
+<div class="row">
+  <div class="col-md-4"></div>
+  <div class="col-md-4">
+    <div class="page-header">
+      <h1 style="text-align:middle;">Cipher Do A Thing</h1>
+    </div>
+<form> 
+  <textarea  class="form-control" rows="3" id="textCipherable"></textarea>
+<br>
+  <select class="form-control" style="width:128px; margin-left:100px;" id="CipherSelection" >
+    <option value="Caesar">Rot13/Caesar Cipher</option>
+    <option value="Base64">Base64</option>
+    <option value="atbash">Atbash</option>
+    <option value="rand">Random</option>
+  </select> 
+
+</form>
+<h1>Your Ciphered Text</h1>
+<h1 id="cipheresult" style="word-wrap: break-word; " style="text-align:center;"></h1>
+
+</div>
+
+
+  <div class="col-md-4">
+
+</div>
+  </div>
+</div>
+
+
+
+
+
+</body>
+
+<script src="javascript/cipher.js" type="text/javascript"></script>
+<script src="javascript/liveupdate.js" type="text/javascript"></script>
+
+
+</html>
