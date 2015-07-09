@@ -24,10 +24,13 @@ function setupUpdater(){
   var newText=input.value;
   if (newText==oldText) return; else oldText=newText;
   var option = document.getElementById('CipherSelection').value;
-  if(option == 'Caesar') set(cipher, rot13());
-  else if(option == 'Base64') set(cipher, base64());
-  else if(option == 'atbash') set(cipher, atbash());
-  else if(option == 'rand') set(cipher, l2n());
+switch(option)
+  {
+    case "Caesar": set(cipher, rot13()); break;
+    case "Base64": set(cipher, base64());break;
+    case "atbash": set(cipher, atbash());break;
+    case "rand"  : set(cipher, l2n()) ;  break;
+  }
 
  }
  
