@@ -29,7 +29,9 @@ switch(option)
     case "Caesar": set(cipher, rot13()); break;
     case "Base64": set(cipher, base64());break;
     case "atbash": set(cipher, atbash());break;
-    case "rand"  : set(cipher, l2n()) ;  break;
+    case "rand"  : set(cipher, l2n()); break;
+    case "TextToBinary": set(cipher, textToBinary()); break;
+    case "dec2BinHexOct": set(cipher, dec2BinHexOct()); break;
   }
 
  }

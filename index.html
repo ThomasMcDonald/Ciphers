@@ -25,27 +25,31 @@ body{background-color: #e5e5e5;}
   <div class="col-md-4"></div>
   <div class="col-md-4">
     <div class="page-header">
-      <h1 style="text-align:center;">Cipher Done Work</h1>
+      <h1 style="text-align:center;">Done Work</h1>
     </div>
-<form> 
-  <textarea  class="form-control" rows="3" id="textCipherable"></textarea>
-<br>
-  <select class="form-control" style="width:128px; margin-left:100px;" id="CipherSelection" >
-    <option value="Caesar">Rot13/Caesar Cipher</option>
-    <option value="Base64">Base64</option>
-    <option value="atbash">Atbash</option>
-    <option value="rand">Random</option>
-  </select> 
+      <form> 
+        <textarea  class="form-control" rows="3" id="textCipherable"></textarea>
+      <br>
+        <select class="form-control" style="width:128px; margin-left:115px;" id="CipherSelection" >
+          <option disabled>Encryptions</option>
+          <option value="Caesar">Rot13/Caesar Cipher</option>
+          <option value="Base64">Base64</option>
+          <option value="atbash">Atbash</option>
+          <option value="rand">Random</option>
+          <option disabled>Conversions</option>
+          <option value="TextToBinary">Binary to Text</option>
+          <option value="dec2BinHexOct">decBinHexOct</option>
+        </select> 
 
-</form>
-<h1>Your Ciphered Text</h1>
-<h1 id="cipheresult" style="word-wrap: break-word; " style="text-align:center;"></h1>
+      </form>
+      <h1 style="text-align:center;">Done Good</h1>
+      <h1 id="cipheresult" style="word-wrap: break-word; " style="text-align:center;"></h1>
 
-</div>
+  </div>
   <div class="col-md-4">
 
-</div>
   </div>
+</div>
 </div>
 
 
@@ -56,6 +60,7 @@ body{background-color: #e5e5e5;}
 
 <script src="javascript/cipher.js" type="text/javascript"></script>
 <script src="javascript/liveupdate.js" type="text/javascript"></script>
+<script src="javascript/conversions.js" type="text/javascript"></script>
 
 
 </html>
