@@ -5,13 +5,19 @@
 
 function textToBinary()
 {
-	var result = "";
-  	var input = document.getElementById("textCipherable").value;
-    for (i=0; i < input.length; i++) {
-        result +=input[i].charCodeAt(0).toString(2) + " ";
-    }
+	var PADDING = "00000000"
 
-	return result;
+	var string = document.getElementById('textCipherable').value;
+	var resultArray = []
+
+	for (var i = 0; i < string.length; i++) {
+	  var compact = string.charCodeAt(i).toString(2)
+	  var padded  = compact.substring(0, PADDING.length - compact.length) + compact
+
+	  resultArray.push(padded)
+	}
+
+	console.log(resultArray.join(" "))
 }
 
 //Decimal to Binary
@@ -32,4 +38,36 @@ return figs;
 
 }
 
-//
+//Binary to Decimal
+function BinarytoDecimal() {
+	var x = document.getElementById("textCipherable").value;
+	x = parseInt(x);
+	var dec = parseInt(x, 2);
+
+
+	var figs = "Decimal of " + x + " is " + dec + '\n';
+
+return figs;
+
+}
+
+
+//To Ascii
+
+function Ascii()
+{
+  var message = document.getElementById('textCipherable').value;
+
+  var ciphertext = "";
+    for(var i = 0; i < message.length; i++) {
+        
+        var character = message.charCodeAt(i);
+            ciphertext += character + " ";
+        
+    }
+     return ciphertext;
+
+}
+
+
+

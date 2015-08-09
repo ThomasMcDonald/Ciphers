@@ -78,20 +78,7 @@ function atbash()
         return coded;
 }
 
-function l2n()
-{
-  var message = document.getElementById('textCipherable').value;
 
-  var ciphertext = "";
-    for(var i = 0; i < message.length; i++) {
-        
-        var character = message.charCodeAt(i);
-            ciphertext += character;
-        
-    }
-     return ciphertext;
-
-}
 
 
 
