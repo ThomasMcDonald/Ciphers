@@ -30,9 +30,11 @@ function dec2BinHexOct() {
 	x = parseInt(x);
 	var bin = x.toString(2);
 	var hex = x.toString(16).toUpperCase();
+	var oct = x.toString(8);
 
 	var figs = "Binary of " + x + " is " + bin + '\n';
 	figs = figs + "Hex of " + x + " is " + hex + '\n';
+	figs = figs + "Oct of " + x + " is " + oct + '\n';
 
 return figs;
 
