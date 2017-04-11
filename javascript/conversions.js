@@ -36,8 +36,7 @@ function dec2BinHexOct() {
 	figs = figs + "Hex of " + x + " is " + hex + '\n';
 	figs = figs + "Oct of " + x + " is " + oct + '\n';
 
-return figs;
-
+	return figs;
 }
 
 //Binary to Decimal
@@ -49,15 +48,12 @@ function BinarytoDecimal() {
 
 	var figs = "Decimal of " + x + " is " + dec + '\n';
 
-return figs;
-
+	return figs;
 }
 
 
 //To Ascii
-
-function Ascii()
-{
+function Ascii(){
   var message = document.getElementById('textCipherable').value;
 
   var ciphertext = "";
@@ -68,7 +64,6 @@ function Ascii()
         
     }
      return ciphertext;
-
 }
 
 

@@ -1,5 +1,47 @@
 //Ciphers
 
+
+function rot13()
+{
+  var preCipher = document.getElementById('textCipherable').value;
+
+  var ciphertext = "";
+      for(var i = 0; i < preCipher.length; i++) {
+          
+          var character = preCipher.charCodeAt(i);
+
+          if(character >= 97 && character <= 122) {
+              ciphertext += String.fromCharCode((character - 97 + 13)% 26 + 97);
+          } else if(character >= 65 && character  <= 90) {
+              ciphertext += String.fromCharCode((character  - 65 + 13)% 26 + 65);
+          } else {
+              ciphertext += String.fromCharCode(character );
+          }
+      }
+    return ciphertext;
+}
+
+function atbash()
+{
+        var message = document.getElementById('textCipherable').value;
+        var alphabet, coded, ch, index, key;
+        alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+             key = "ZYXWVUTSRQPONMLKJIHGFECDBA"
+        coded = "";                                      
+        for (var i = 0; i < message.length; i++) {        // for as many letters as there are
+            ch = message.charAt(i);                   //   access the letter in the message
+            index = alphabet.indexOf(ch);             //   find its position in alphabet
+            if (index == -1) {                        //   if it's not a letter,
+                coded = coded + ch;                   //     then leave it as is & add
+            }                                         //   otherwise,
+            else {                                    //     find the corresponding
+                coded = coded + key.charAt(index);    //     letter in the key & add
+            }
+        }
+        return coded;
+}
+
+
 function base64()
 {
   var data = document.getElementById('textCipherable').value;
@@ -34,48 +76,6 @@ function base64()
   var r = data.length % 3;
   var output = (r ? enc.slice(0, r - 3) : enc) + '==='.slice(r || 3);
   return output;
-}
-
-
-
-function rot13()
-{
- var preCipher = document.getElementById('textCipherable').value;
-
-var ciphertext = "";
-    for(var i = 0; i < preCipher.length; i++) {
-        
-        var character = preCipher.charCodeAt(i);
-
-        if(character >= 97 && character <= 122) {
-            ciphertext += String.fromCharCode((character - 97 + 13)% 26 + 97);
-        } else if(character >= 65 && character  <= 90) {
-            ciphertext += String.fromCharCode((character  - 65 + 13)% 26 + 65);
-        } else {
-            ciphertext += String.fromCharCode(character );
-        }
-    }
-     return ciphertext;
-}
-
-function atbash()
-{
-        var message = document.getElementById('textCipherable').value;
-        var alphabet, coded, ch, index, key;
-        alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-             key = "ZYXWVUTSRQPONMLKJIHGFECDBA"
-        coded = "";                                      
-        for (var i = 0; i < message.length; i++) {        // for as many letters as there are
-            ch = message.charAt(i);                   //   access the letter in the message
-            index = alphabet.indexOf(ch);             //   find its position in alphabet
-            if (index == -1) {                        //   if it's not a letter,
-                coded = coded + ch;                   //     then leave it as is & add
-            }                                         //   otherwise,
-            else {                                    //     find the corresponding
-                coded = coded + key.charAt(index);    //     letter in the key & add
-            }
-        }
-        return coded;
 }
 
 
