@@ -1,15 +1,15 @@
 # Ciphers
 
-Pretty standard javascript that converts to a number of different 
+Pretty standard javascript that converts to a number of different: 
 
-###Encryptions
+### Encryptions
 * Caesar Cipher
 * Base64 
 * Atbash // Currently Disabled
 
 
 
-Conversions
+### Conversions
 * Binary to Text // After brief tests, I have concluded that this is broken
 * decBinHexOct
 * Binary to Decimal
